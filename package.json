@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony-top-level-await bin/src/index.js",
+    "start": "tsc && node --harmony-top-level-await bin/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
