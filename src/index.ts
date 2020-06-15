@@ -5,7 +5,7 @@ const MongoClient = mongodb.MongoClient;
 
 const url = 'mongodb://localhost';
 
-const globalConfig = config.get('globalConfig');
+const globalConfig: object = config.get('globalConfig');
 console.log(globalConfig);
 
 const client = await MongoClient.connect(url, { useUnifiedTopology: true });
@@ -25,7 +25,7 @@ app.get('/:entry', async (request, response) => {
     response.render('404');
     return;
   }
-  response.render('index', data);
+  response.render('index', {...data, ...globalConfig});
 });
 
 app.listen(3000);
