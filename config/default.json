@@ -1,6 +1,7 @@
 {
   "globalConfig": {
     "imprint": "https://fridaysforfuture.de/impressum/",
-    "dataProtection": "https://fridaysforfuture.de/datenschutz/"
+    "dataProtection": "https://fridaysforfuture.de/datenschutz/",
+    "icon": "https://fridaysforfuture.de/wp-content/uploads/2020/04/logo-4.png"
   }
 }
