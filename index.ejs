@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>Fridays For Future</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script
+      src="https://kit.fontawesome.com/c20ac1017a.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="icon"
+      href="https://fridaysforfuture.de/wp-content/uploads/2020/04/logo-4.png"
+      type="image/x-icon"/>
+</head>
+
+<body>
+  <div id="bg-image">
+    <img
+      id="userPhoto"
+      src="https://fridaysforfuture.de/wp-content/uploads/2020/04/logo-4.png"
+      alt="User Photo">
+      <a href="https://fridaysforfuture.de" id="userName">FridaysForFuture.de</a>
+        <div id="links">
+          <% for(var i = 0; i < links.length; ++i) { %>
+            <a
+              class="link"
+              href="<%= links[i].url %>"
+              target="_blank">
+              <%= links[i].text %>
+            </a>
+          <% }%>
+        </div>
+        <div id="social">
+          <a
+            href="https://www.instagram.com/fridaysforfuture.de"
+            target="_blank">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/fridaysforfuture.de/"
+            target="_blank">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a
+            href="https://twitter.com/FridayForFuture"
+            target="_blank">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCZwF7J5rbyJXBZMJrE_8XCA"
+            target="_blank">
+            <i class="fab fa-youtube-square"></i>
+          </a>
+        </div>
+
+        <div class="impressum">
+          <a
+            href="https://fridaysforfuture.de/impressum/">
+            Impressum
+          </a>
+          <a
+            href="https://fridaysforfuture.de/datenschutz/"
+            target="_blank">️Datenschutz
+          </a>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script
+      src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js>
+    </script>
+
+    <script  src="index.js"></script>
+  </body>
+</html>
