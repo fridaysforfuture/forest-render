@@ -1,9 +1,12 @@
 import express from 'express';
 import mongodb from 'mongodb';
-
+import config from 'config';
 const MongoClient = mongodb.MongoClient;
 
 const url = 'mongodb://localhost';
+
+const globalConfig = config.get('globalConfig');
+console.log(globalConfig);
 
 const client = await MongoClient.connect(url, { useUnifiedTopology: true });
 const db = client.db('forest');
