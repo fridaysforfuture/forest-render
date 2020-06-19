@@ -28,4 +28,4 @@ app.get('/:entry', async (request, response) => {
   response.render('index', {...data, ...globalConfig});
 });
 
-app.listen(3000);
+app.listen(3002);
