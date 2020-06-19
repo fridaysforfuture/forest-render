@@ -1,6 +1,9 @@
 import express from 'express';
 import mongodb from 'mongodb';
 import config from 'config';
+import dotenv from 'dotenv';
+dotenv.config();
+
 const MongoClient = mongodb.MongoClient;
 
 const url = 'mongodb://localhost';
@@ -28,4 +31,7 @@ app.get('/:entry', async (request, response) => {
   response.render('index', {...data, ...globalConfig});
 });
 
-app.listen(3002);
+if(process.env.PORT === undefined) {
+  process.env.PORT = '3002';
+}
+app.listen(process.env.PORT);
