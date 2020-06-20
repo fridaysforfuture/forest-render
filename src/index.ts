@@ -1,4 +1,5 @@
 import express from 'express';
+import i18n from 'i18n';
 import mongodb from 'mongodb';
 import config from 'config';
 import dotenv from 'dotenv';
@@ -18,6 +19,13 @@ const collection = db.collection('entries')
 const app = express();
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
+i18n.configure({
+  locales: ['en', 'de'],
+  directory: 'locales'
+});
+
+app.use(i18n.init);
 
 app.use(express.static('assets'));
 
