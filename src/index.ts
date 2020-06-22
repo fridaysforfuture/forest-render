@@ -29,7 +29,10 @@ app.use(i18n.init);
 
 app.use(express.static('assets'));
 
-app.get('/:entry', async (request, response) => {
+app.get('/:entry?', async (request, response) => {
+  if(request.params.entry === null) {
+    request.params.entry = 'index';
+  }
   const data = await collection.findOne({ name: request.params.entry });
   if(data === null) {
     response.status(404);
