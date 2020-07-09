@@ -45,26 +45,21 @@
           <% }%>
         </div>
         <div id="social">
-          <a
-            href="https://www.instagram.com/fridaysforfuture.de"
-            target="_blank">
-            <i class="fab fa-instagram-square"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/fridaysforfuture.de/"
-            target="_blank">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a
-            href="https://twitter.com/FridayForFuture"
-            target="_blank">
-            <i class="fab fa-twitter-square"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCZwF7J5rbyJXBZMJrE_8XCA"
-            target="_blank">
-            <i class="fab fa-youtube-square"></i>
-          </a>
+          <% for(socialLink in socialLinks) {
+              // socialLink might by empty
+              if(socialLinks[socialLink]) { %>
+            <a
+              href="<%= socialLinks[socialLink] %>"
+              target="_blank">
+              <!-- We use a newspaper icon for the website -->
+              <% if(socialLink === 'website') { %>
+                <i class="fa fa-newspaper"></i>
+              <% } else { %>
+                <i class="fab fa-<%= socialLink %>-square">
+                </i>
+              <% } %>
+            </a>
+          <% } }%>
         </div>
 
         <div class="impressum">
