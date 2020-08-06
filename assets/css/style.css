@@ -93,6 +93,7 @@ html {
   width: 100%;
   text-align: center;
   text-decoration: none;
+  font-family: var(--font);
   color: var(--accentColor);
 }
 
