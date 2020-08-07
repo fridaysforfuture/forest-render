@@ -1,0 +1,25 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy via ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.FOREST_HOST }}
+        username: ${{ secrets.FOREST_USER }}
+        key: ${{ secrets.FOREST_KEY }}
+        script: |
+          cd /root/forest/forest-render
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          git checkout master
+          git pull
+          npm i --no-progress
+          pm2 restart forest-render
