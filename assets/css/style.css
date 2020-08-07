@@ -1,127 +1,116 @@
 /* Style Settings */
-@import url('https://fridaysforfuture.de/fonts/links.css');
+@import url("https://fridaysforfuture.de/fonts/links.css");
 :root {
-    --bgColor: #1DA64A;
-    --accentColor: #FFFFFF;
-    --hoverColor: #FFFFFF;
-    --font: 'Jost*', sans-serif;
+  --bgColor: #1da64a;
+  --accentColor: #ffffff;
+  --hoverColor: #ffffff;
+  --font: "Jost*", sans-serif;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    background: url("https://fridaysforfuture.de/wp-content/uploads/2020/05/RS24112_FFF_Muc_BestOf-124-fhd-1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-}
 html {
-  height: 100vh;
+  min-height: 100vh;
 }
 
-#social{
-    text-align: center;
-    font-size: 3rem;
-    color: #ffffff;
-    margin-top: 27px;
+#social {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-top: 27px;
 }
 
-#social a{
-    padding: 10px;
-    color: #ffffff;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#social a {
+  padding: 10px;
+  color: #ffffff;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-
-#userPhoto{
-    width: 96px;
-    height: 96px;
-    display: block;
-    margin: 35px auto 20px;
+#userPhoto {
+  width: 96px;
+  height: 96px;
+  display: block;
+  margin: 35px auto 20px;
 }
 #rainbow {
-    transform: skewY(-15deg);
-    position: absolute;
-    width: 120%;
-    top: 25%;
-    z-index: -1;
-    box-shadow:
-    0 0 0 35px #1DA64A,
-    0 0 0 65px #549670,
-    0 0 0 95px  #90D3ED,
-    0 0 0 125px #f5333f,
-    0 0 0 155px #90D3ED,
-    0 0 0 185px #1DA64A
+  transform: skewY(-15deg);
+  position: absolute;
+  width: 120%;
+  top: 25%;
+  z-index: -1;
+  box-shadow: 0 0 0 35px #1da64a, 0 0 0 65px #549670, 0 0 0 95px #90d3ed,
+    0 0 0 125px #f5333f, 0 0 0 155px #90d3ed, 0 0 0 185px #1da64a;
 }
 
-#userName{
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.25;
-    display: block;
-    font-family: var(--font);
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
+#userName {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  display: block;
+  font-family: var(--font);
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
 }
 
-#links{
-    max-width: 675px;
-    width: auto;
-    display: block;
-    margin: 27px auto;
-    
+#links {
+  max-width: 675px;
+  width: auto;
+  display: block;
+  margin: 27px auto;
 }
-.link{
-    display: block;
-    background-color: var(--bgColor);
-    color: var(--accentColor);
-    font-family: var(--font);
-    text-align: center;
-    margin-bottom: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 17px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all .25s cubic-bezier(.08,.59,.29,.99);
-    border: solid var(--hoverColor) 3px;
-}
-
-.link:hover{
-    background-color: var(--hoverColor);
-    color: var(--bgColor);
+.link {
+  display: block;
+  background-color: var(--bgColor);
+  color: var(--accentColor);
+  font-family: var(--font);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 17px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
+  border: solid var(--hoverColor) 3px;
 }
 
-.impressum{
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    color: var(--accentColor);
+.link:hover {
+  background-color: var(--hoverColor);
+  color: var(--bgColor);
 }
 
-#social a:link, .impressum a:link{
-    text-decoration: none;
-    color: var(--accentColor);
+.impressum {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font);
+  color: var(--accentColor);
 }
 
-#social a:link, .impressum a:hover{
-    color: var(--bgColor);
-    text-decoration: underline;
+#social a:link,
+.impressum a:link {
+  text-decoration: none;
+  color: var(--accentColor);
 }
 
-#social a:link, .impressum a:visited{
-   color: #FFFFFF;
-    text-decoration: none; 
+#social a:link,
+.impressum a:hover {
+  color: var(--bgColor);
+  text-decoration: underline;
+}
+
+#social a:link,
+.impressum a:visited {
+  color: #ffffff;
+  text-decoration: none;
 }
