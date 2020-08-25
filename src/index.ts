@@ -41,7 +41,13 @@ app.get("/:entry?", async (request, response) => {
     response.render("404");
     return;
   }
-  response.render("index", { ...data, ...globalConfig });
+  if (data.logo) {
+    data.icon = `http://localhost:3001/resources/${data.logo}`;
+  }
+  if (data.background) {
+    data.backgroundImage = `http://localhost:3001/resources/${data.background}`;
+  }
+  response.render("index", { ...data, ...globalConfig, ...data});
 });
 
 if (process.env.PORT === undefined) {
