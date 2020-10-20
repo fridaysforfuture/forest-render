@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && node --harmony-top-level-await bin/src/index.js",
+    "build": "NODE_ENV=production npx postcss src/css/style.css -o assets/tailwind.css --config=postcss.config.cjs && tsc && node --harmony-top-level-await bin/src/index.js",
     "start": "nodemon --exec 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,7 +27,10 @@
   },
   "devDependencies": {
     "@types/node": "^14.11.5",
+    "cssnano": "^4.1.10",
     "nodemon": "^2.0.4",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.5",
     "typescript": "^3.9.5"
   },
   "nodemonConfig": {

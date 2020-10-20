@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="/css/tailwind.min.css">
+    <link rel="stylesheet" href="tailwind.css">
     <title><%= __('404_title') %></title>
 <style>
 body {
@@ -23,6 +23,7 @@ body {
   <% if(frontendUrl) %>
   <%- __(
       '404_description',
-      `<a class="text-blue-500" href="${frontendUrl}">Forest</a>`) %>
+      `<a class="text-blue-500" href="${frontendUrl}">Forest</a>`)
+  %>
   </p>
 </body>

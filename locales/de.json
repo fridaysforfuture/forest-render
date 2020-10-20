@@ -1,7 +1,7 @@
 {
   "Privacy policy": "Datenschutzerklärung",
   "About": "Impressum",
-  "404": "Dieser Eintrag existiert leider noch nicht",
+  "404": "Dieser Eintrag existiert leider (noch) nicht",
 	"404_title": "404 - Forest",
-  "404_description": "Du willst das ändern? Versuchs mit Forest"
+  "404_description": "Du willst das ändern? Probiere &nbsp;%s aus!"
 }
