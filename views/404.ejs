@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
 
-    <title>404 - Fridays for Future</title>
+    <link rel="stylesheet" href="/css/tailwind.min.css">
+    <title><%= __('404_title') %></title>
+<style>
+body {
+  background: #1B7340;
+}
+.link {
+  color: #c8e6ff;
+}
+</style>
 </head>
-<body> 
-  404 - <%= __('404') %>
+<body class="h-full flex flex-col justify-center text-white p-3"> 
+  <h1 class="text-4xl text-center font-bold mb-5">
+    404 - <%= __('404') %>
+  </h1>
+  <p class="text-2xl text-center">
+  <% if(frontendUrl) %>
+  <%- __(
+      '404_description',
+      `<a class="text-blue-500" href="${frontendUrl}">Forest</a>`) %>
+  </p>
 </body>

@@ -5,6 +5,7 @@
     "icon": "https://fridaysforfuture.de/wp-content/uploads/2020/04/logo-4.png",
     "backgroundImage": "https://fridaysforfuture.de/wp-content/uploads/2020/05/RS24112_FFF_Muc_BestOf-124-fhd-1.jpg",
     "matomoUrl": "https://analytics.fridaysforfuture.de/",
-    "matomoSideId": "3"
+    "matomoSideId": "3",
+    "frontendUrl": "https://forest.fffutu.re"
   }
 }

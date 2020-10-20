@@ -38,7 +38,7 @@ app.get("/:entry?", async (request, response) => {
   const data = await collection.findOne({ name: request.params.entry.toLowerCase() });
   if (data === null) {
     response.status(404);
-    response.render("404");
+    response.render("404", {...globalConfig});
     return;
   }
   if (data.logo) {
