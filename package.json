@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production npx postcss src/css/style.css -o assets/tailwind.css --config=postcss.config.cjs && tsc && node --harmony-top-level-await bin/src/index.js",
+    "build": "npx postcss src/css/style.css -o assets/tailwind.css --config=postcss.config.cjs && tsc && node --harmony-top-level-await bin/src/index.js",
     "start": "nodemon --exec 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

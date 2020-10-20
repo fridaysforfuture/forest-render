@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full">
+<html class="h-full" lang="<%= getLocale()%>">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -23,7 +23,7 @@ body {
   <% if(frontendUrl) %>
   <%- __(
       '404_description',
-      `<a class="text-blue-500" href="${frontendUrl}">Forest</a>`)
+      `<a class="text-fff-blue" href="${frontendUrl}">Forest</a>`)
   %>
   </p>
 </body>

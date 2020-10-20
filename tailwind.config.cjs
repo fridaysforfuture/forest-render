@@ -4,7 +4,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    enableded: true,
+    enabled: true,
     content: ['./**/*.ejs'],
   },
   theme: {
@@ -13,7 +13,7 @@ module.exports = {
         fff: {
           'dark-green':  '#1B7340',
           'light-green': '#1DA64A',
-          'blue':        '#549670',
+          'blue':        '#90D3ED',
           'red':         '#F5333F',
         },
       },
