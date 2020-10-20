@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%=getLocale()%>">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -50,7 +50,7 @@
       id="userPhoto"
       src="<%= icon %>"
       alt="User Photo">
-      <p id="userName"><%= friendlyName %></p>
+      <h1 id="userName"><%= friendlyName %></h1>
         <div id="links">
           <% for(var i = 0; i < links.length; ++i) { %>
             <a
@@ -67,7 +67,8 @@
               if(socialLinks[socialLink]) { %>
             <a
               href="<%= socialLinks[socialLink] %>"
-              target="_blank">
+              target="_blank"
+              aria-role="<%= socialLink %>">
               <!-- We use a newspaper icon for the website -->
               <% if(socialLink === 'website') { %>
                 <i class="fa fa-newspaper"></i>
@@ -88,7 +89,8 @@
           </a>
           <a
             href="<%= dataProtection %>"
-            target="_blank">
+            target="_blank"
+            rel="noopener">
             <%=__('Privacy policy')%>
           </a>
         </div>
