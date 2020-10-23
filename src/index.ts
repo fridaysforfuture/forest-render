@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const MongoClient = mongodb.MongoClient;
-const HOST = process.env.PORT || "localhost";
+const HOST = process.env.MONGO_HOST || "localhost";
 
 const url = `mongodb://${HOST}`;
 
