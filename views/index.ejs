@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html lang="<%=getLocale()%>">
+<html lang="<%=getLocale()%>" class="minh-screen">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
     <title><%= friendlyName %></title>
 
-    <link rel="stylesheet" href="/css/style.css">
-
-    <script
-      src="https://kit.fontawesome.com/c20ac1017a.js"
-      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/tailwind.css">
     <link
       rel="icon"
       href="<%= icon %>"
       type="image/x-icon"/>
-      <style>
-        body{
-            background: url(<%=backgroundImage%>);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-        }
-      </style>
+<style>
+body {
+  background: url("https://pad.fridaysforfuture.is/static/skins/colibris/images/background.jpg");
+  background:
+    url("https://bilder.fffutu.re/filestore/1/5/8/2/9/0_d64c75008fea863/158290scr_34bea0efe45ce17.jpg?v=2020-10-17+13%3A01%3A56");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+@font-face {
+  font-family: 'Icon Font';
+  src: url('ffficonfont-webfont.eot');
+  src: url('ffficonfont-webfont.eot?#iefix') format('embedded-opentype'),
+       url('ffficonfont-webfont.woff2') format('woff2'),
+       url('ffficonfont-webfont.woff') format('woff'),
+       url('ffficonfont-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.social {
+  font-family: 'Icon Font';
+  line-height: 1;
+}
+#twitter::before {
+  content: 'T';
+}
+#youtube::before {
+  content: 'Y';
+}
+#facebook::before {
+  content: 'F';
+}
+#instagram::before {
+  content: 'I';
+}
+#website::before {
+  content: 'I';
+}
+</style>
 <% if(matomoUrl && matomoSideId) { %>
 <!-- Matomo -->
 <script type="text/javascript">
@@ -44,53 +70,61 @@
 <% } %>
 </head>
 
-<body>
-  <div id="bg-image">
+<body class="minh-screen px-1">
+  <div id="bg-image" class="flex flex-col items-center text-white bg-top">
     <img
       id="userPhoto"
       src="<%= icon %>"
-      alt="User Photo">
-      <h1 id="userName"><%= friendlyName %></h1>
-        <div id="links">
-          <% for(var i = 0; i < links.length; ++i) { %>
-            <a
-              class="link"
-              href="<%= links[i].url %>"
-              target="_blank">
-              <%= links[i].text %>
-            </a>
-          <% }%>
-        </div>
-        <div id="social">
-          <% for(socialLink in socialLinks) {
-              // socialLink might by empty
-              if(socialLinks[socialLink]) { %>
-            <a
-              href="<%= socialLinks[socialLink] %>"
-              target="_blank"
-              aria-label="<%= socialLink %>">
-              <!-- We use a newspaper icon for the website -->
-              <% if(socialLink === 'website') { %>
-                <i class="fa fa-newspaper"></i>
-              <% } else if(socialLink === 'telegram') { %>
-                <i class="fab fa-telegram-plane"></i>
-              <% } else { %>
-                <i class="fab fa-<%= socialLink %>">
-                </i>
-              <% } %>
-            </a>
-          <% } }%>
-        </div>
-
-        <div class="impressum">
+      alt="User Photo"
+      class="mt-10 mb-2 h-32 w-32"
+      >
+      <h1 class="text-5xl font-bold text-shadow"><%= friendlyName %></h1>
+      <% for(var i = 0; i < links.length; ++i) { %>
+        <a
+          class="block rounded-lg bg-fff-dark-green px-5 my-3 text-2xl
+          font-semibold w-full max-w-xl text-center hover:bg-opacity-75
+          hover:bg-white hover:text-fff-dark-green py-2"
+          href="<%= links[i].url %>"
+          target="_blank"
+          >
+            <%= links[i].text %>
+        </a>
+      <% }%>
+      <div class="flex flex-wrap my-4">
+        <% for(socialLink in socialLinks) {
+            // socialLink might by empty
+            if(socialLinks[socialLink]) { %>
           <a
-            href="<%= imprint %>">
+            href="<%= socialLinks[socialLink] %>"
+            target="_blank"
+            aria-label="<%= socialLink %>"
+            id="<%= socialLink %>"
+            class="social my-1 bg-fff-dark-green mx-5 rounded-lg text-4xl p-1
+            hover:bg-opacity-75 hover:bg-white hover:text-fff-dark-green text-white">
+            <!-- We use a newspaper icon for the website -->
+            <% if(socialLink === 'website') { %>
+              <i class="fa fa-newspaper"></i>
+            <% } else if(socialLink === 'telegram') { %>
+              <i class="fab fa-telegram-plane"></i>
+            <% } else { %>
+            <% } %>
+          </a>
+        <% } }%>
+      </div>
+
+        <div class="flex mb-3">
+          <a
+            href="<%= imprint %>"
+            class="mr-4 block bg-fff-dark-green text-white hover:text-fff-dark-green
+            hover:bg-white hover:bg-opacity-75 px-1 rounded-lg">
             <%=__('About')%>
           </a>
           <a
             href="<%= dataProtection %>"
             target="_blank"
-            rel="noopener">
+            rel="noopener"
+            class="ml-4 block bg-fff-dark-green text-white hover:text-fff-dark-green
+            hover:bg-white hover:bg-opacity-75 px-1 rounded-lg">
             <%=__('Privacy policy')%>
           </a>
         </div>

@@ -4,10 +4,13 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    enabled: true,
+    enabled: false,
     content: ['./**/*.ejs'],
   },
   theme: {
+    fontFamily: {
+      sans: 'Jost',
+    },
     extend: {
       colors: {
         fff: {

@@ -47,7 +47,7 @@ app.get("/:entry?", async (request, response) => {
   if (data.background) {
     data.backgroundImage = `http://localhost:3001/resources/${data.background}`;
   }
-  response.render("index", { ...data, ...globalConfig, ...data});
+  response.render("index", { ...data, ...globalConfig, ...data, });
 });
 
 if (process.env.PORT === undefined) {
