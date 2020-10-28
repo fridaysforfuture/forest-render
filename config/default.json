@@ -2,8 +2,8 @@
   "globalConfig": {
     "imprint": "https://fridaysforfuture.de/impressum/",
     "dataProtection": "https://fridaysforfuture.de/datenschutz/",
-    "icon": "fff-logo.png",
-    "backgroundImage": "background.jpg",
+    "icon": "/fff-logo.png",
+    "backgroundImage": "/background.jpg",
     "matomoUrl": "https://analytics.fridaysforfuture.de/",
     "matomoSideId": "3",
     "frontendUrl": "https://forest.fffutu.re"
