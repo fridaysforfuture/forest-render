@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%=getLocale()%>" class="minh-screen">
+<html lang="<%=getLocale()%>" class="min-h-screen">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -23,7 +23,7 @@ body {
 
 @font-face {
   font-family: 'Icon Font';
-  src: url('ffficonfont-webfont.ttf') format('truetype');
+  src: url('ffficonfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -66,20 +66,20 @@ body {
 <% } %>
 </head>
 
-<body class="minh-screen px-1">
+<body class="min-h-screen px-1 flex flex-col justify-center">
   <div id="bg-image" class="flex flex-col items-center text-white bg-top w-full">
     <img
       id="userPhoto"
       src="<%= icon %>"
       alt="User Photo"
-      class="mt-10 mb-2 h-32 w-32"
+      class="mt-8 mb-5 h-32 w-32"
       >
-      <h1 class="text-5xl font-bold text-shadow"><%= friendlyName %></h1>
+      <h1 class="text-3xl font-bold text-shadow"><%= friendlyName %></h1>
       <% for(var i = 0; i < links.length; ++i) { %>
         <a
-          class="block rounded-lg bg-fff-dark-green px-5 my-3 text-2xl
-          font-semibold w-full max-w-xl text-center hover:bg-opacity-75
-          hover:bg-white hover:text-fff-dark-green py-2"
+          class="block rounded-full bg-fff-dark-green px-5 my-2 text-xl
+          font-medium border-2 border-white text-shadow w-full max-w-2xl text-center hover:bg-opacity-75
+          hover:bg-white hover:text-fff-dark-green py-4"
           href="<%= links[i].url %>"
           target="_blank"
           >
@@ -95,7 +95,7 @@ body {
             target="_blank"
             aria-label="<%= socialLink %>"
             id="<%= socialLink %>"
-            class="social my-1 bg-fff-dark-green mx-5 rounded-lg text-4xl p-1
+            class="social my-1 bg-fff-dark-green mx-5 rounded-full text-4xl p-2
             hover:bg-opacity-75 hover:bg-white hover:text-fff-dark-green text-white">
             <!-- We use a newspaper icon for the website -->
             <% if(socialLink === 'website') { %>
@@ -112,7 +112,7 @@ body {
           <a
             href="<%= imprint %>"
             class="mr-4 block bg-fff-dark-green text-white hover:text-fff-dark-green
-            hover:bg-white hover:bg-opacity-75 px-1 rounded-lg">
+            hover:bg-white hover:bg-opacity-75 px-1 rounded-md">
             <%=__('About')%>
           </a>
           <a
@@ -120,7 +120,7 @@ body {
             target="_blank"
             rel="noopener"
             class="ml-4 block bg-fff-dark-green text-white hover:text-fff-dark-green
-            hover:bg-white hover:bg-opacity-75 px-1 rounded-lg">
+            hover:bg-white hover:bg-opacity-75 px-1 rounded-md">
             <%=__('Privacy policy')%>
           </a>
         </div>
