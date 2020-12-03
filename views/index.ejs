@@ -23,7 +23,11 @@ body {
 
 @font-face {
   font-family: 'Icon Font';
-  src: url('ffficonfont.ttf') format('truetype');
+  src: url('ffficonfont.eot');
+  src: url('ffficonfont.eot?#iefix') format('embedded-opentype'),
+       url('ffficonfont.woff2') format('woff2'),
+       url('ffficonfont.woff') format('woff'),
+       url('ffficonfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -44,7 +48,7 @@ body {
   content: 'I';
 }
 #website::before {
-  content: 'I';
+  content: 'w';
 }
 </style>
 <% if(matomoUrl && matomoSideId) { %>

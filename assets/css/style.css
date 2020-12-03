@@ -1,7 +1,6 @@
 /* Style Settings */
-@import url("https://fridaysforfuture.de/fonts/links.css");
 :root {
-  --bgColor: #1da64a;
+  --bgColor: #1B7340;
   --accentColor: #ffffff;
   --hoverColor: #ffffff;
   --font: "Jost*", sans-serif;
@@ -81,7 +80,6 @@ html {
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
-  border: solid var(--hoverColor) 3px;
 }
 
 .link:hover {
