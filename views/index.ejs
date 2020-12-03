@@ -74,14 +74,14 @@ body {
       id="userPhoto"
       src="<%= icon %>"
       alt="User Photo"
-      class="mt-8 mb-5 h-32 w-32"
+      class="my-8 h-32 w-32"
       >
       <h1 class="text-3xl font-bold text-shadow"><%= friendlyName %></h1>
       <% for(var i = 0; i < links.length; ++i) { %>
         <a
           class="block rounded-full bg-fff-dark-green px-5 my-2 text-xl
-          font-medium border-2 border-white text-shadow w-full max-w-2xl text-center hover:bg-opacity-75
-          hover:bg-white hover:text-fff-dark-green py-4"
+          font-medium border-4 border-fff-light-green w-full max-w-2xl text-center hover:bg-opacity-75
+          hover:bg-white hover:text-fff-dark-green hover:border-fff-dark-green py-4"
           href="<%= links[i].url %>"
           target="_blank"
           >
