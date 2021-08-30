@@ -6,9 +6,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const MongoClient = mongodb.MongoClient;
-const HOST = process.env.PORT || "localhost";
+const MONGO_HOST = process.env.MONGO_HOST || "localhost";
 
-const url = `mongodb://${HOST}`;
+const url = `mongodb://${MONGO_HOST}`;
 
 const globalConfig: object = config.get("globalConfig");
 console.log(globalConfig);
@@ -35,19 +35,25 @@ app.get("/:entry?", async (request, response) => {
   if (request.params.entry === undefined) {
     request.params.entry = "index";
   }
-  const data = await collection.findOne({ name: request.params.entry.toLowerCase() });
+  const data = await collection.findOne({
+    name: request.params.entry.toLowerCase(),
+  });
   if (data === null) {
     response.status(200);
-    response.render("404", {...globalConfig});
+    response.render("404", { ...globalConfig });
     return;
   }
   if (data.logo) {
-    data.icon = `http://localhost:3001/resources/${data.logo}`;
+    data.icon = `http://${process.env.API_HOST || "localhost"}:3001/resources/${
+      data.logo
+    }`;
   }
   if (data.background) {
-    data.backgroundImage = `http://localhost:3001/resources/${data.background}`;
+    data.backgroundImage = `http://${
+      process.env.API_HOST || "localhost"
+    }:3001/resources/${data.background}`;
   }
-  response.render("index", { ...data, ...globalConfig, ...data});
+  response.render("index", { ...data, ...globalConfig, ...data });
 });
 
 if (process.env.PORT === undefined) {
