@@ -65,6 +65,9 @@
           href="<%= socialLinks[socialLink] %>"
           target="_blank"
           aria-label="<%= socialLink %>"
+          <% if(socialLink === "mastodon") { %>
+            rel="me"
+          <% } %>
         >
           <!-- We use a newspaper icon for the website -->
           <% if(socialLink === 'website') { %>
