@@ -6,6 +6,8 @@
     "backgroundImage": "/background.jpg",
     "matomoUrl": "https://analytics.fridaysforfuture.de/",
     "matomoSideId": "3",
-    "frontendUrl": "https://forest.fffutu.re"
+    "frontendUrl": "https://forest.fffutu.re",
+    "ogDescription": "Forest - Linktree for Future",
+    "ogImageUrl": "https://ffftre.es/fff-logo.png"
   }
 }
