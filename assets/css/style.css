@@ -1,10 +1,10 @@
 /* Style Settings */
-@import url("https://fridaysforfuture.de/fonts/links.css");
+@import url("https://fonts.googleapis.com/css?family=Jost");
 :root {
   --bgColor: #1da64a;
   --accentColor: #ffffff;
   --hoverColor: #ffffff;
-  --font: "Jost*", sans-serif;
+  --font: "Jost", sans-serif;
 }
 
 * {
